@@ -1,0 +1,159 @@
+{
+  "timesteps": 20,
+  "stride": 5,
+  "n_features": 70,
+  "feature_names": [
+    "Destination_Port",
+    "Flow_Duration",
+    "Total_Fwd_Packets",
+    "Total_Backward_Packets",
+    "Total_Length_of_Fwd_Packets",
+    "Total_Length_of_Bwd_Packets",
+    "Fwd_Packet_Length_Max",
+    "Fwd_Packet_Length_Min",
+    "Fwd_Packet_Length_Mean",
+    "Fwd_Packet_Length_Std",
+    "Bwd_Packet_Length_Max",
+    "Bwd_Packet_Length_Min",
+    "Bwd_Packet_Length_Mean",
+    "Bwd_Packet_Length_Std",
+    "Flow_Bytes_per_s",
+    "Flow_Packets_per_s",
+    "Flow_IAT_Mean",
+    "Flow_IAT_Std",
+    "Flow_IAT_Max",
+    "Flow_IAT_Min",
+    "Fwd_IAT_Total",
+    "Fwd_IAT_Mean",
+    "Fwd_IAT_Std",
+    "Fwd_IAT_Max",
+    "Fwd_IAT_Min",
+    "Bwd_IAT_Total",
+    "Bwd_IAT_Mean",
+    "Bwd_IAT_Std",
+    "Bwd_IAT_Max",
+    "Bwd_IAT_Min",
+    "Fwd_PSH_Flags",
+    "Fwd_URG_Flags",
+    "Fwd_Header_Length",
+    "Bwd_Header_Length",
+    "Fwd_Packets_per_s",
+    "Bwd_Packets_per_s",
+    "Min_Packet_Length",
+    "Max_Packet_Length",
+    "Packet_Length_Mean",
+    "Packet_Length_Std",
+    "Packet_Length_Variance",
+    "FIN_Flag_Count",
+    "SYN_Flag_Count",
+    "RST_Flag_Count",
+    "PSH_Flag_Count",
+    "ACK_Flag_Count",
+    "URG_Flag_Count",
+    "CWE_Flag_Count",
+    "ECE_Flag_Count",
+    "Down_per_Up_Ratio",
+    "Average_Packet_Size",
+    "Avg_Fwd_Segment_Size",
+    "Avg_Bwd_Segment_Size",
+    "Fwd_Header_Length1",
+    "Subflow_Fwd_Packets",
+    "Subflow_Fwd_Bytes",
+    "Subflow_Bwd_Packets",
+    "Subflow_Bwd_Bytes",
+    "Init_Win_bytes_forward",
+    "Init_Win_bytes_backward",
+    "act_data_pkt_fwd",
+    "min_seg_size_forward",
+    "Active_Mean",
+    "Active_Std",
+    "Active_Max",
+    "Active_Min",
+    "Idle_Mean",
+    "Idle_Std",
+    "Idle_Max",
+    "Idle_Min"
+  ],
+  "classes": [
+    "BENIGN",
+    "Bot",
+    "DDoS",
+    "DoS GoldenEye",
+    "DoS Hulk",
+    "DoS Slowhttptest",
+    "DoS slowloris",
+    "FTP-Patator",
+    "Heartbleed",
+    "Infiltration",
+    "PortScan",
+    "SSH-Patator",
+    "Web Attack-Brute Force",
+    "Web Attack-Sql Injection",
+    "Web Attack-XSS"
+  ],
+  "class_weight_map": {
+    "0": 0.09537662696320526,
+    "3": 16.900301874801396,
+    "4": 0.7673144481233815,
+    "5": 32.174984875983064,
+    "6": 30.35687785388128,
+    "7": 22.979153164830418,
+    "8": 35456.833333333336,
+    "9": 7091.366666666667,
+    "11": 30.61902705814623,
+    "12": 115.87200435729848,
+    "13": 7091.366666666667,
+    "14": 270.66284987277356
+  },
+  "train_files": [
+    "Monday-WorkingHours.pcap_ISCX.csv",
+    "Tuesday-WorkingHours.pcap_ISCX.csv",
+    "Wednesday-workingHours.pcap_ISCX.csv",
+    "Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv",
+    "Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv"
+  ],
+  "val_files": [
+    "Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv",
+    "Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv"
+  ],
+  "test_files": [
+    "Friday-WorkingHours-Morning.pcap_ISCX.csv"
+  ],
+  "x_train_export": [
+    "X_train_seq.part1_of_3.npy",
+    "X_train_seq.part2_of_3.npy",
+    "X_train_seq.part3_of_3.npy",
+    "X_val_seq.npy",
+    "X_test_seq.npy",
+    "y_train_seq.npy",
+    "y_val_seq.npy",
+    "y_test_seq.npy"
+  ],
+  "sharded_export_note": "Large arrays may be split into parts to comply with GitHub LFS 2GB hard limit.",
+  "shapes": {
+    "X_train_seq": [
+      425482,
+      20,
+      70
+    ],
+    "y_train_seq": [
+      425482
+    ],
+    "X_val_seq": [
+      102436,
+      20,
+      70
+    ],
+    "y_val_seq": [
+      102436
+    ],
+    "X_test_seq": [
+      38203,
+      20,
+      70
+    ],
+    "y_test_seq": [
+      38203
+    ]
+  }
+}
