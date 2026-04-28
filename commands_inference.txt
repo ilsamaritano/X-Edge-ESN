@@ -1,0 +1,4 @@
+#Command to launch inference for BiLSTM on Raspberry Pi 4
+run_inference.py --data-dir /home/sammarv/x-edge-esn/artifacts/preprocessed_sequences --model-ckpt-path /home/sammarv/x-edge-esn/ids_bilstm_output/bilstm_run1.pt --output-log /home/sammarv/x-edge-esn/inference_pi4_bilstm.log --batch-size 1
+#Command to launch inference for BiGru on Raspberry Pi 4
+run_inference.py --data-dir /home/sammarv/x-edge-esn/artifacts/preprocessed_sequences --model-ckpt-path /home/sammarv/x-edge-esn/ids_bigru_output/bigru_run7.pt --output-log /home/sammarv/x-edge-esn/inference_pi4_bigru.log --batch-size 1
